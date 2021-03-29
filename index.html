@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Coffee Shop</title>
+</head>
+<body>
+  <section>
+    <div class="circle"></div>
+    <header>
+      <a href="#" ><img src="img/logo.png" alt="logo" class="logo"></a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">What's New</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+    <div class="content">
+      <div class="textBox">
+        <h2>It's not just Coffee<br>It's <span>Starbucks</span></h2>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+          when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="imgBox">
+        <img src="img/img1.png" alt="Green" class="starbucks">
+      </div>
+    </div>
+    <ul class="thumb">
+      <li><img src="img/thumb1.png" alt="green" onclick="imgSlider('img/img1.png');changeCircleColor('#017143')"></li>
+      <li><img src="img/thumb2.png" alt="strawberry" onclick="imgSlider('img/img2.png');changeCircleColor('#eb7495')"></li>
+      <li><img src="img/thumb3.png" alt="pink" onclick="imgSlider('img/img3.png');changeCircleColor('#d752b1')"></li>
+    </ul>
+    <ul class="sci">
+      <li><a href="#"><img src="img/facebook.png" alt="Facebook"></a></li>
+      <li><a href="#"><img src="img/twitter.png" alt="Twitter"></a></li>
+      <li><a href="#"><img src="img/instagram.png" alt="Instagram"></a></li>
+    </ul>
+  </section>
+
+  <script type="text/javascript">
+    function imgSlider(anything) {
+      document.querySelector('.starbucks').src = anything;
+    }
+
+    function changeCircleColor(color) {
+      const circle = document.querySelector('.circle');
+      circle.style.background = color;
+    }
+  </script>
+</body>
+</html>
